@@ -33,7 +33,6 @@ const store =useWeeksStore()
 const route = useRoute()
 const id = parseInt(route.params.id as string)
 const loading =ref(true)
-const listToggle= ref(false)
 onMounted(async () => {
     loading.value  = false
      await store.fetchWeekById(id)
