@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
+@import "tailwindcss";
+@theme {
+  --color-primary: #FF6767;
+}
+
+* {
+    font-family: 'Playwrite NZ Basic',sans-serif;
+}

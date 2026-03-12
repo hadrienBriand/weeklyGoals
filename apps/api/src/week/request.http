@@ -1,0 +1,39 @@
+### Get weeks
+
+GET http://localhost:3000/week
+
+### Get passed week
+
+GET http://localhost:3000/week/passed
+
+### Get current week
+
+GET http://localhost:3000/week/current
+
+### Get week by id 
+
+GET http://localhost:3000/week/8
+
+### Create week
+POST http://localhost:3000/week
+content-type :application/json
+
+{
+    "startDate": "2026-03-09",
+    "description" :"Troisième semaine",
+    "summary":"franchement c'est cool",
+    "comments": "grosse motivation"
+}
+
+### Delete week
+
+DELETE  http://localhost:3000/week/9
+
+### Update a week
+PATCH http://localhost:3000/week/8
+content-type: application/json
+
+{
+    "summary":"c'est cool de mettre à jour",
+    "comments": "grosse motivation de zinzin"
+}

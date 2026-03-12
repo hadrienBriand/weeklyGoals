@@ -1,0 +1,30 @@
+### Get goals 
+
+GET http://localhost:3000/week/8/goals
+
+### Get goal by id
+
+GET http://localhost:3000/week/8/goals/1
+
+### Create goal
+POST http://localhost:3000/week/10/goals
+Content-Type: application/json
+
+{
+    "title": "Devenir footballeur pro",
+    "description": "Never say never"
+}
+
+### Update Goal
+
+PATCH  http://localhost:3000/week/8/goals/2
+Content-Type: application/json
+
+{
+    "title": "devenir un génie du web",
+    "description": "Qui ne tente rien n'a rien"
+}
+
+### Delete goal
+
+DELETE http://localhost:3000/week/8/goals/23
