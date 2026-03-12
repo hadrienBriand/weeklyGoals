@@ -10,7 +10,7 @@ WORKDIR /app
 COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
 
 COPY apps ./apps
-COPY packages ./packages 2>/dev/null || true # Ignore si le dossier packages existe pas
+
 
 RUN pnpm install --frozen-lockfile --filter=api --prod
 
