@@ -12,7 +12,7 @@ COPY pnpm-workspace.yaml pnpm-lock.yaml package.json ./
 COPY apps ./apps
 
 
-RUN pnpm install --frozen-lockfile --filter=api --prod
+RUN pnpm install --frozen-lockfile --filter=api 
 
 RUN cd apps/api && pnpm prisma generate
 
@@ -30,6 +30,8 @@ WORKDIR /app
 
 COPY pnpm-workspace.yaml ./
 COPY package.json ./
+
+RUN pnpm install --frozen-lockfile --filter=api --prod
 
 COPY --from=builder --chown=nestjs:nodejs /app/node_modules ./node_modules
 
