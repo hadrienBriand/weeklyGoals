@@ -10,6 +10,7 @@ export class WeekService {
      calculateEndDate (startDate: Date): Date {
         const endDate = new Date(startDate);
         endDate.setDate(endDate.getDate() + 4); 
+        endDate.setHours(23,59,59)
         return endDate;
     };
 
